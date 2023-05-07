@@ -4,12 +4,12 @@ var NFTs = []
 //this function will take in some values as paremeters,
 // create an onject using the paremeter passed to it for it's metadate,
 //and store it in the variable above.
-function mintNFT (Name, Eyecolor, Height, Weight) {
+function mintNFT (Name, Eyecolor, Height, Role) {
     const NFT = {
         "Name": Name,
         "Eyecolor": Eyecolor,
         "Height":Height,
-        "Weight": Weight
+        "Role" : Role
     }
     NFTs.push(NFT)
     console.log("Minted:" + Name);
@@ -22,7 +22,7 @@ function listNFTs() {
         console.log(NFTs[i].Name);
         console.log(NFTs[i].Eyecolor);
         console.log(NFTs[i].Height);
-        console.log(NFTs[i].Weight);     
+        console.log(NFTs[i].Role);     
     }
 }
 
@@ -32,6 +32,6 @@ function gettotalSupply() {
 } 
 
 //call your fucntions below this line
-mintNFT("Soobin", "Brown", "6'0", "22");
+mintNFT("Soobin", "Brown", "6'0", "Rapper");
 listNFTs();
 gettotalSupply();
